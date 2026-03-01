@@ -1,7 +1,7 @@
 ~ start
 
 if not GAME.has_talk_to_richard:
-	Richard: Enfin, tu arrives ! J'espère que tu as mon fric ! Mes pauvres petits 10 000 $ !!!
+	Richard: Enfin, tu arrives ! J'esère que tu as mon fric ! Mes pauvres petits 10 000 $ !!!
 	You: Heureux de te revoir aussi, Richard ! Je suis venu ici avec 100 $ ! Je voudrais jouer dans ton casino pour rembourser ma dette.
 	do PERSONNAGE.set_state("Richard", "ANGRY")
 	Richard: Cette histoire commence sérieusement à me casser les pieds ! Je te laisse 1 heure pour rembourser cette dette à tes risques et périls !!! 
