@@ -1,31 +1,31 @@
 ~ start
 
 if not GAME.has_talk_to_richard:
-	Richard: Enfin, tu arrives ! J'esère que tu as mon fric ! Mes pauvres petits 10 000 $ !!!
-	You: Heureux de te revoir aussi, Richard ! Je suis venu ici avec 100 $ ! Je voudrais jouer dans ton casino pour rembourser ma dette.
+	Richard: At last, you have arrived! I hope that you have my moolah! My $10 000!!!
+	You: I'm glad to meet you, Richard ! I came here with $100! I would like to play in your casino to reimbourse my debt.
 	do PERSONNAGE.set_state("Richard", "ANGRY")
-	Richard: Cette histoire commence sérieusement à me casser les pieds ! Je te laisse 1 heure pour rembourser cette dette à tes risques et périls !!! 
-	You: Je préfère ne rien savoir, jouer et te rembourser dans le plus grand calme. Ni problème ni querelle !
+	Richard: This story is starting to make me angry! I give you 1 hour to reimbourse my debt at your risk!!! 
+	You: I prefer to just play and pay you back. No problem no fighting!
 	do PERSONNAGE.set_state("Richard", "HAPPY")
-	Richard: Mouais... bon, que veux-tu ?
+	Richard: Yeah right, what do you want?
 	do GAME.change_talk_to_richard(true)
 else:
 
 	do PERSONNAGE.set_state("Richard", "HAPPY")
-	Richard: [[C'est bon, tu as la moula ??|Tu viens me rendre mon blé ?|AAAAAhhhhhhh, tu as enfin le pognon..]] Je savais que je pouvais compter sur toi ! 
-	You: Alors heuuuuu, je n'ai pas ton argent, mais...
+	Richard: [[That's good, you have the money??|You're coming to give me back my money?|AAAAAhhhhhhh, you finally have the money..]] I always knew that I could count on you! 
+	You: Ummmm heuuuuu, I don't have your money, but...
 	 
 You: heuu...
-- Je pourrais avoir des jetons ?
-	Richard: Aller, tu en veux combien ?
-	- 500 jetons pour 50 $
+- Can I have tokens?
+	Richard: Sure, how many do you want?
+	- 500 tokens for $50
 		if GAME.get_money() - 50 >= 0: 
 			do GAME._add_FCC(500)
 			do GAME._substract_money(50)
-			Richard: Seulement 500 ? Mais t'as pas un rond !!
+			Richard: Only 500? But you don't have a penny to your name!!
 		else:
 			do PERSONNAGE.set_state("Richard", "ANGRY")
-			Richard: Tu veux m'arnaquer, sale idiot.
+			Richard: You want to rip me off, dirty idiot.
 	- 1000 jetons pour 100 $
 		if GAME.get_money() - 100 >= 0: 
 			do GAME._add_FCC(1000)
