@@ -31,9 +31,6 @@ func change_scene_to_file(path: String, duration: float = DEFAULT_DURATION, dela
 	_animator.play("fade")
 	await _animator.animation_finished
 
-	var err := get_tree().change_scene_to_file(path)
-	if err:
-		push_error("TRANSIT ERROR: Failed to change scene to %s: %s" % [path, err])
 
 	# re-enable mouse interaction before fading back in
 	_curtain.mouse_filter = MOUSE_FILTER_IGNORE
