@@ -1,6 +1,6 @@
 ~ start
 
-Jack: Tu n'as plus d'ARGENT !! Je te tuerais sous les ordres du patron
+Jack: You have no more MONEY!! I'll kill you on the boss's orders
 set GAME.emit_signal("kill")
 
 => END
