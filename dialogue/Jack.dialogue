@@ -7,7 +7,7 @@ set GAME.emit_signal("kill")
 
 ~ PlusDeTemps
 
-Jack: Le patron t'avais laissé 1h mais... le temps est écoulé. MEURT !
+Jack: The boss gave you an hour, but... time's up. DIES!
 set GAME.emit_signal("kill")
 
 => END
